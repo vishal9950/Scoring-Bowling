@@ -43,9 +43,15 @@ describe('Array score arguments: ', () => {
     expect(score(rollArray3)).toBe(computedScore3);
   });
 
-  const rollArray4 = [1, 2, 10, 3, 7, 4, 2, 8, 2, 10, 1, 1, 2, 4, 10, 6, 2];
-  const computedScore4 = 109;
+  const rollArray4 = [10, 10, 5, 3, 2, 8, 6, 4, 3, 3, 2, 8, 9, 1, 1, 1, 1, 1];
+  const computedScore4 = 120;
   test(`Should work for [${rollArray4}]: `, () => {
     expect(score(rollArray4)).toBe(computedScore4);
+  });
+
+  const rollArray5 = [10, 10, 5, 3, 2, 8, 6, 4, 3, 3, 2, 8, 9, 1, 1, 1, 1, 1];
+  const computedScore5 = 120;
+  test(`Should work for [${rollArray5}]: `, () => {
+    expect(score(rollArray5)).toBe(computedScore5);
   });
 });

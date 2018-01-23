@@ -35,7 +35,7 @@ function score(args) {
   } else if (args[i] + args[i + 1] === 10) {
     computeScore += args[i] + args[i + 1] + args[i + 2];
   }
-  if (computeScore > 300) { return 300; }
+  if (computeScore > 300) { computeScore = 300; }
   return computeScore;
 }
 
