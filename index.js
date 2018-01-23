@@ -1,7 +1,7 @@
 function score(args) {
-  if (args === null) {
-    console.log('Err1: Null value supplied');
-    return null;
+  if (args === null || args === undefined) {
+    console.log(`Err1: ${args} value supplied`);
+    return args;
   }
   return true;
 }
