@@ -14,14 +14,17 @@ function score(args) {
   }
   let computeScore = 0;
   let i;
-  for (i = 0; i < args.length - 3; i += 1) {
+  for (i = 0; i < args.length - 2; i += 1) {
     if (args[i] + args[i + 1] < 10) {
       computeScore += args[i] + args[i + 1];
+      // console.log(computeScore, i, args[i]);
       i += 1;
     } else if (args[i] === 10) {
       computeScore += args[i] + args[i + 1] + args[i + 2];
+      // console.log(computeScore, i, args[i]);
     } else if (args[i] + args[i + 1] === 10) {
       computeScore += args[i] + args[i + 1] + args[i + 2];
+      // console.log(computeScore, i, args[i]);
       // console.log(computeScore, i, args[i]);
       i += 1;
     }
@@ -32,6 +35,7 @@ function score(args) {
   } else if (args[i] + args[i + 1] === 10) {
     computeScore += args[i] + args[i + 1] + args[i + 2];
   }
+  if (computeScore > 300) { return 300; }
   return computeScore;
 }
 
