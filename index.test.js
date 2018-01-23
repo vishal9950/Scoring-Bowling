@@ -8,4 +8,8 @@ describe('Arguments test: ', () => {
   test('Undefined argument: ', () => {
     expect(score(undefined)).toBe(undefined);
   });
+
+  test('Insufficient args 1: ', () => {
+    expect(score([])).toBe(false);
+  });
 });
