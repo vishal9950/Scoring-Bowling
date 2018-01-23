@@ -9,6 +9,7 @@ function score(args) {
   }
   const check1 = verifyLength(args);
   if (!check1) {
+    console.log('Err2: Insufficient args provided');
     return false;
   }
   return true;
