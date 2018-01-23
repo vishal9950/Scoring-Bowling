@@ -18,6 +18,8 @@ function score(args) {
     if (args[i] + args[i + 1] < 10) {
       computeScore += args[i] + args[i + 1];
       i += 1;
+    } else if (args[i] === 10) {
+      computeScore += args[i] + args[i + 1] + args[i + 2];
     }
   }
   if (args[i] + args[i + 1] < 10) {
