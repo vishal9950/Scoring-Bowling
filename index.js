@@ -20,10 +20,17 @@ function score(args) {
       i += 1;
     } else if (args[i] === 10) {
       computeScore += args[i] + args[i + 1] + args[i + 2];
+    } else if (args[i] + args[i + 1] === 10) {
+      computeScore += args[i] + args[i + 1] + args[i + 2];
+      // console.log(computeScore, i, args[i]);
+      i += 1;
     }
   }
+  // console.log(args[i], i);
   if (args[i] + args[i + 1] < 10) {
     computeScore += args[i] + args[i + 1];
+  } else if (args[i] + args[i + 1] === 10) {
+    computeScore += args[i] + args[i + 1] + args[i + 2];
   }
   return computeScore;
 }
