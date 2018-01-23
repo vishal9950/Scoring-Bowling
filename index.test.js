@@ -17,3 +17,11 @@ describe('Arguments test: ', () => {
     expect(score([1, 2, 3])).toBe(false);
   });
 });
+
+const rollArray = [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6];
+const scoreArray = 90;
+describe('Array score arguments: ', () => {
+  test(`Should work for [${rollArray}]: `, () => {
+    expect(score(rollArray)).toBe(scoreArray);
+  });
+});
