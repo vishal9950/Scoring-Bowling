@@ -49,8 +49,8 @@ describe('Array score arguments: ', () => {
     expect(score(rollArray4)).toBe(computedScore4);
   });
 
-  const rollArray5 = [10, 10, 5, 3, 2, 8, 6, 4, 3, 3, 2, 8, 9, 1, 1, 1, 1, 1];
-  const computedScore5 = 120;
+  const rollArray5 = [1, 1, 1, 1, 2, 8, 9, 1, 10, 0, 2, 8, 2, 0, 1, 10, 10, 1, 2];
+  const computedScore5 = 102;
   test(`Should work for [${rollArray5}]: `, () => {
     expect(score(rollArray5)).toBe(computedScore5);
   });

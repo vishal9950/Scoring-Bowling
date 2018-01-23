@@ -14,28 +14,37 @@ function score(args) {
   }
   let computeScore = 0;
   let i;
+  counter = 0;
   for (i = 0; i < args.length - 2; i += 1) {
     if (args[i] + args[i + 1] < 10) {
       computeScore += args[i] + args[i + 1];
-      // console.log(computeScore, i, args[i]);
+      // console.log(computeScore, i, args[i], counter);
       i += 1;
+      counter += 2;
     } else if (args[i] === 10) {
-      computeScore += args[i] + args[i + 1] + args[i + 2];
-      // console.log(computeScore, i, args[i]);
+      if (counter < 20) {
+        computeScore += args[i] + args[i + 1] + args[i + 2];
+      }
+      counter += 2;
+      // console.log(computeScore, i, args[i], counter);
     } else if (args[i] + args[i + 1] === 10) {
       computeScore += args[i] + args[i + 1] + args[i + 2];
-      // console.log(computeScore, i, args[i]);
+      // console.log(computeScore, i, args[i], counter);
+      counter += 2;
       // console.log(computeScore, i, args[i]);
       i += 1;
     }
   }
   // console.log(args[i], i);
-  if (args[i] + args[i + 1] < 10) {
+  if (args[i] + args[i + 1] < 10 && counter < 20) {
     computeScore += args[i] + args[i + 1];
-  } else if (args[i] + args[i + 1] === 10) {
-    computeScore += args[i] + args[i + 1] + args[i + 2];
+    // console.log(computeScore, i, args[i]);
   }
-  if (computeScore > 300) { computeScore = 300; }
+  //  else if (args[i] + args[i + 1] === 10) {
+  //   computeScore += args[i] + args[i + 1] + args[i + 2];
+  //   // console.log(computeScore, i, args[i]);
+  // }
+  // if (computeScore > 300) { computeScore = 300; }
   return computeScore;
 }
 
