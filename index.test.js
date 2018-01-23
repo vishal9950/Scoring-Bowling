@@ -12,4 +12,8 @@ describe('Arguments test: ', () => {
   test('Insufficient args 1: ', () => {
     expect(score([])).toBe(false);
   });
+
+  test('Insufficient args 2: ', () => {
+    expect(score([1, 2, 3])).toBe(false);
+  });
 });
